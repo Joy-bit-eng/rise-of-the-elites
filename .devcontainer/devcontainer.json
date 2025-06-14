@@ -1,5 +1,10 @@
 {
-  "name": "Node.js Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/node:20",
-  "postCreateCommand": "npm install"
+  "name": "Node.js Dev",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "postCreateCommand": "npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint"]
+    }
+  }
 }
