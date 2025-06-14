@@ -1,24 +1,39 @@
-// src/main.js
+import Phaser from 'phaser'
 
-import Phaser from 'phaser';
-import PreloadScene from './scenes/PreloadScene.js';
-import GameScene from './scenes/GameScene.js';
+import PreloadScene from './scenes/PreloadScene'
+import BootScene from './scenes/BootScene'
+import MainMenuScene from './scenes/MainMenuScene'
+import OverworldScene from './scenes/OverworldScene'
+import BattleScene from './scenes/BattleScene'
+import FusionScene from './scenes/FusionScene'
+import GameScene from './scenes/GameScene'
 
 const config = {
   type: Phaser.AUTO,
-  width: 800,
-  height: 600,
-  backgroundColor: '#1d1d1d',
-  parent: 'game',
+  width: 320,
+  height: 180,
+  zoom: 4,
   pixelArt: true,
+  parent: 'game-container',
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: { y: 0 },
-      debug: false
+      gravity: { y: 0 }
     }
   },
-  scene: [PreloadScene, GameScene]
-};
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH
+  },
+  scene: [
+    PreloadScene,
+    BootScene,
+    MainMenuScene,
+    OverworldScene,
+    BattleScene,
+    FusionScene,
+    GameScene
+  ]
+}
 
-new Phaser.Game(config);
+export default new Phaser.Game(config)
