@@ -2,7 +2,7 @@ import Phaser from 'phaser'
 
 import PreloadScene from './scenes/PreloadScene'
 import BootScene from './scenes/BootScene'
-import MainMenuScene from './scenes/MainMenuScene'
+import MainMenuScene from './scenes/MainMenu' // ✅ FIXED
 import OverworldScene from './scenes/OverworldScene'
 import BattleScene from './scenes/BattleScene'
 import FusionScene from './scenes/FusionScene'
@@ -28,7 +28,7 @@ const config = {
   scene: [
     PreloadScene,
     BootScene,
-    MainMenuScene,
+    MainMenuScene,    // ✅ Included properly now
     OverworldScene,
     BattleScene,
     FusionScene,
